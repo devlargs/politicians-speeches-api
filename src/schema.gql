@@ -1,0 +1,75 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreatePoliticianInput {
+  firstName: String!
+  imageUrl: String!
+  lastName: String!
+}
+
+input CreateSpeechInput {
+  content: String!
+  date: Int!
+  politicians: [String!]!
+  title: String!
+}
+
+input ListPoliticianInput {
+  _id: String
+  firstName: String!
+  imageUrl: String!
+  lastName: String!
+}
+
+input ListSpeechInput {
+  _id: String
+  content: String
+  date: Int
+  politicians: String!
+  title: String
+}
+
+type Mutation {
+  createPolitician(input: CreatePoliticianInput!): Politician!
+  createSpeech(input: CreateSpeechInput!): Speech!
+  deletePolitician(id: String!): Boolean!
+  updatePolitician(id: String!, input: UpdatePoliticianInput!): Politician!
+  updateSpeech(_id: String!, input: UpdateSpeechInput!): Speech!
+}
+
+type Politician {
+  _id: String!
+  firstName: String!
+  imageUrl: String!
+  lastName: String!
+}
+
+type Query {
+  politician(_id: String!): Politician!
+  politicians(filters: ListPoliticianInput): [Politician!]!
+  speech(_id: String!): Speech!
+  speeches(filters: ListSpeechInput): [Speech!]!
+}
+
+type Speech {
+  _id: String!
+  content: String!
+  date: Int!
+  politicians: [Politician!]!
+  title: String!
+}
+
+input UpdatePoliticianInput {
+  firstName: String
+  imageUrl: String
+  lastName: String
+}
+
+input UpdateSpeechInput {
+  _id: String
+  content: String
+  date: Int
+  politicians: String!
+  title: String
+}
