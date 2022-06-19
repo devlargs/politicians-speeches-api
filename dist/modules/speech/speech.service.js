@@ -40,6 +40,10 @@ let SpeechService = class SpeechService {
     list(filters) {
         return this.speechModel.find(Object.assign({}, filters)).sort({ title: "ascending" });
     }
+    delete(_id) {
+        console.log(_id);
+        return this.speechModel.deleteOne({ _id });
+    }
     updateOne(input, _id) {
         return this.speechModel.findOneAndUpdate({ _id }, Object.assign({}, input), {
             new: true,

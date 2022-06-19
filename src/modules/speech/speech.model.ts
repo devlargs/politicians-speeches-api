@@ -13,9 +13,9 @@ export class Speech {
   @Prop({ unique: true })
   title: string;
 
-  @Field(() => Number)
+  @Field(() => String)
   @Prop()
-  date: number;
+  date: string;
 
   @Field(() => String)
   @Prop()

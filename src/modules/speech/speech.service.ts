@@ -42,6 +42,11 @@ export class SpeechService {
     return this.speechModel.find({ ...filters }).sort({ title: "ascending" });
   }
 
+  delete(_id: MongooseSchema.Types.ObjectId) {
+    console.log(_id);
+    return this.speechModel.deleteOne({ _id });
+  }
+
   updateOne(input: UpdateSpeechInput, _id: MongooseSchema.Types.ObjectId) {
     return this.speechModel.findOneAndUpdate(
       { _id },

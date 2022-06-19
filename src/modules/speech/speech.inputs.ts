@@ -9,8 +9,8 @@ export class CreateSpeechInput {
   @Field(() => String)
   content: string;
 
-  @Field(() => Number)
-  date: number;
+  @Field(() => String)
+  date: string;
 
   @Field(() => [String])
   politicians: MongooseSchema.Types.ObjectId[];
@@ -24,8 +24,8 @@ export class ListSpeechInput {
   @Field(() => String, { nullable: true })
   title?: string;
 
-  @Field(() => Number, { nullable: true })
-  date?: number;
+  @Field(() => String, { nullable: true })
+  date?: string;
 
   @Field(() => String, { nullable: true })
   content?: string;

@@ -22,6 +22,9 @@ export declare class SpeechService {
     })[], Speech & import("mongoose").Document<any, any, any> & {
         _id: any;
     }, {}, SpeechDocument>;
+    delete(_id: MongooseSchema.Types.ObjectId): import("mongoose").Query<import("mongodb").DeleteResult, Speech & import("mongoose").Document<any, any, any> & {
+        _id: any;
+    }, {}, SpeechDocument>;
     updateOne(input: UpdateSpeechInput, _id: MongooseSchema.Types.ObjectId): import("mongoose").Query<Speech & import("mongoose").Document<any, any, any> & {
         _id: any;
     }, Speech & import("mongoose").Document<any, any, any> & {

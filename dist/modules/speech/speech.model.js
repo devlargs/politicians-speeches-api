@@ -26,9 +26,9 @@ __decorate([
     __metadata("design:type", String)
 ], Speech.prototype, "title", void 0);
 __decorate([
-    (0, graphql_1.Field)(() => Number),
+    (0, graphql_1.Field)(() => String),
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Speech.prototype, "date", void 0);
 __decorate([
     (0, graphql_1.Field)(() => String),

@@ -23,8 +23,8 @@ __decorate([
     __metadata("design:type", String)
 ], CreateSpeechInput.prototype, "content", void 0);
 __decorate([
-    (0, graphql_1.Field)(() => Number),
-    __metadata("design:type", Number)
+    (0, graphql_1.Field)(() => String),
+    __metadata("design:type", String)
 ], CreateSpeechInput.prototype, "date", void 0);
 __decorate([
     (0, graphql_1.Field)(() => [String]),
@@ -45,8 +45,8 @@ __decorate([
     __metadata("design:type", String)
 ], ListSpeechInput.prototype, "title", void 0);
 __decorate([
-    (0, graphql_1.Field)(() => Number, { nullable: true }),
-    __metadata("design:type", Number)
+    (0, graphql_1.Field)(() => String, { nullable: true }),
+    __metadata("design:type", String)
 ], ListSpeechInput.prototype, "date", void 0);
 __decorate([
     (0, graphql_1.Field)(() => String, { nullable: true }),

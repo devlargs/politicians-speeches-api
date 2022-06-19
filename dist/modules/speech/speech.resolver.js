@@ -39,6 +39,10 @@ let SpeechResolver = class SpeechResolver {
     async updateSpeech(input, _id) {
         return this.speechService.updateOne(input, _id);
     }
+    async deleteSpeech(_id) {
+        await this.speechService.delete(_id);
+        return true;
+    }
 };
 __decorate([
     (0, graphql_1.Query)(() => speech_model_1.Speech),
@@ -76,6 +80,13 @@ __decorate([
     __metadata("design:paramtypes", [speech_inputs_1.UpdateSpeechInput, mongoose_1.Schema.Types.ObjectId]),
     __metadata("design:returntype", Promise)
 ], SpeechResolver.prototype, "updateSpeech", null);
+__decorate([
+    (0, graphql_1.Mutation)(() => Boolean),
+    __param(0, (0, graphql_1.Args)("id", { type: () => String })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [mongoose_1.Schema.Types.ObjectId]),
+    __metadata("design:returntype", Promise)
+], SpeechResolver.prototype, "deleteSpeech", null);
 SpeechResolver = __decorate([
     (0, graphql_1.Resolver)(() => speech_model_1.Speech),
     __metadata("design:paramtypes", [speech_service_1.SpeechService])

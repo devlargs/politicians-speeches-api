@@ -53,4 +53,12 @@ export class SpeechResolver {
   ) {
     return this.speechService.updateOne(input, _id);
   }
+
+  @Mutation(() => Boolean)
+  async deleteSpeech(
+    @Args("id", { type: () => String }) _id: MongooseSchema.Types.ObjectId,
+  ) {
+    await this.speechService.delete(_id);
+    return true;
+  }
 }

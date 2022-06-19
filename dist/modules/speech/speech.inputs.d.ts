@@ -2,13 +2,13 @@ import { Schema as MongooseSchema } from "mongoose";
 export declare class CreateSpeechInput {
     title: string;
     content: string;
-    date: number;
+    date: string;
     politicians: MongooseSchema.Types.ObjectId[];
 }
 export declare class ListSpeechInput {
     _id?: MongooseSchema.Types.ObjectId;
     title?: string;
-    date?: number;
+    date?: string;
     content?: string;
     politicians: MongooseSchema.Types.ObjectId[];
 }

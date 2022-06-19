@@ -1,10 +1,3 @@
-/// <reference types="mongoose/types/pipelinestage" />
-/// <reference types="mongoose/types/connection" />
-/// <reference types="mongoose/types/cursor" />
-/// <reference types="mongoose/types/document" />
-/// <reference types="mongoose/types/error" />
-/// <reference types="mongoose/types/mongooseoptions" />
-/// <reference types="mongoose/types/schemaoptions" />
 import { Schema as MongooseSchema } from "mongoose";
 import { Speech, SpeechDocument } from "./speech.model";
 import { SpeechService } from "./speech.service";
@@ -26,4 +19,5 @@ export declare class SpeechResolver {
     updateSpeech(input: UpdateSpeechInput, _id: MongooseSchema.Types.ObjectId): Promise<Speech & import("mongoose").Document<any, any, any> & {
         _id: any;
     }>;
+    deleteSpeech(_id: MongooseSchema.Types.ObjectId): Promise<boolean>;
 }

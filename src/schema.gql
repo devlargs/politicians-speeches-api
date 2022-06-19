@@ -10,7 +10,7 @@ input CreatePoliticianInput {
 
 input CreateSpeechInput {
   content: String!
-  date: Int!
+  date: String!
   politicians: [String!]!
   title: String!
 }
@@ -25,7 +25,7 @@ input ListPoliticianInput {
 input ListSpeechInput {
   _id: String
   content: String
-  date: Int
+  date: String
   politicians: String!
   title: String
 }
@@ -34,6 +34,7 @@ type Mutation {
   createPolitician(input: CreatePoliticianInput!): Politician!
   createSpeech(input: CreateSpeechInput!): Speech!
   deletePolitician(id: String!): Boolean!
+  deleteSpeech(id: String!): Boolean!
   updatePolitician(id: String!, input: UpdatePoliticianInput!): Politician!
   updateSpeech(_id: String!, input: UpdateSpeechInput!): Speech!
 }
@@ -55,7 +56,7 @@ type Query {
 type Speech {
   _id: String!
   content: String!
-  date: Int!
+  date: String!
   politicians: [Politician!]!
   title: String!
 }

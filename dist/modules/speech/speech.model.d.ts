@@ -10,7 +10,7 @@ import { Politician } from "../politician/politician.model";
 export declare class Speech {
     _id: MongooseSchema.Types.ObjectId;
     title: string;
-    date: number;
+    date: string;
     content: string;
     politicians: MongooseSchema.Types.ObjectId[] | Politician[];
 }
